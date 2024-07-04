@@ -13,3 +13,4 @@ npm start
 https://portfolio-choi-wcgjc.run.goorm.site
 
 24.7.1 23:27 
+24.7.4 36.59
