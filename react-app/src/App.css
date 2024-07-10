@@ -25,11 +25,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  height: 100% !important;
+
 }
 
 body {
   font-weight: 400;
   overflow-x: hidden;
+  /* height: 100% !important; */
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
@@ -238,6 +241,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 .banner .tagline {
   font-weight: 700;
@@ -299,7 +303,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+.webdecoded {
+  white-space: nowrap; /* Keeps "webdecoded" on one line */
+}
 
+.wrap {
+  display: block; /* Starts a new line for {text} */
+  font-size: 20px;
+  margin-top: 10px;
+  color: #FFFF11;
+  display: inline-block;
+  height: 50px;
+  overflow: hidden;
+}
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
