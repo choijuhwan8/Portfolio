@@ -12,7 +12,6 @@ export const Banner = () => {
 
     const tick = useCallback(() => {
         const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
-
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -48,9 +47,9 @@ export const Banner = () => {
 				<Row className="align-items-center">
 					<Col xs={12} md={6} xl={7}>
 						<span className="tagline">Welcome to my Portfolio</span>
-						<h1>Hi I'm <span class="webdecoded">Choi Juhwan</span><br/><span class="wrap">{text}</span></h1>
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-						<button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
+						<h1>Hi I'm <span className="webdecoded">Choi Juhwan</span><br/><span className="wrap">{text}</span></h1>
+						<p>As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.</p>
+						<button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}>Let's connect <ArrowRightCircle size={25} /></button>
 					</Col>
 					<Col xs={12} md={6} xl={5}>
 						<img src={headerImg} alt='Headder Img' />
