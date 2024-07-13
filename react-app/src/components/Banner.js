@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/header-img.svg';
+// import headerImg from '../assets/img/header-img.svg';
+import profileImage from '../assets/img/profile-image.png';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -43,20 +44,24 @@ export const Banner = () => {
 
 	return (
 		<section className='banner' id='home'>
-			<Container>
-				<Row className="align-items-center">
-					<Col xs={12} md={6} xl={7}>
-						<span className="tagline">Welcome to my Portfolio</span>
-						<h1>Hi I'm <span className="webdecoded">Choi Juhwan</span><br/><span className="wrap">{text}</span></h1>
+            <Container>
+                <Row className="align-items-center">
+                    <Col xs={12} xl={7}>
+                        <span className="tagline">Welcome to my Portfolio</span>
+                        <h1>Hi I'm <span className="webdecoded">Choi Juhwan</span><br /><span className="wrap">{text}</span></h1>
+                        <Col xs={12} className="d-xl-none text-center">
+                        	<img className='profileImage' src={profileImage} alt='Profile Img' />
+                    	</Col>
 						<p>As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.</p>
-						<button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}>Let's connect <ArrowRightCircle size={25} /></button>
-					</Col>
-					<Col xs={12} md={6} xl={5}>
-						<img src={headerImg} alt='Headder Img' />
-					</Col>
-				</Row>
-			</Container>
-			
-		</section>
+                        <button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}>Let's connect <ArrowRightCircle size={25} /></button>
+                    </Col>
+                    <Col xs={12} xl={5} className="d-none d-xl-block">
+                        <img className='profileImage' src={profileImage} alt='Profile Img' />
+                    </Col>
+                    {/* Additional Col for smaller screens (below xl) */}
+                    
+                </Row>
+            </Container>
+        </section>
 	)
 }

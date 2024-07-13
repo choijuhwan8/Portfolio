@@ -235,6 +235,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
+  /* position: relative; */
   margin-top: 0;
   padding: 260px 0 100px 0;
   /* background-image: url('./assets/img/banner-bg.png'); */
@@ -244,12 +245,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   height: 100vh;
 }
+.banner .container {
+  padding-bottom: 40px; /* Adjust this value as needed */
+}
+
+@media (max-width: 1000px) {
+  .banner {
+    padding-top: 100px; /* Override padding-top to 100px for mobile screens */
+	
+  }
+}
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -262,12 +275,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+
+@media (max-width: 1000px) {
+  .banner h1 {
+    margin-bottom: 0px;
+	font-size: 50px;
+  }
+}
 .banner p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+}
+@media (max-width: 1000px) {
+  .banner p {
+    font-size: 14px;
+  }
 }
 .banner button {
   color: #fff;
@@ -317,6 +342,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 50px;
   overflow: hidden;
 }
+.profileImage {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align the image to the top of the parent (.banner) */
+    height: 100%; /* Take full height of the parent (.banner) */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Rounded border */
+	z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .profileImage {
+        position: relative; /* Revert position to relative */
+        height: 60%; /* Adjust height for smaller screens */
+        width: 60%; 
+		margin-bottom: 40px;
+    }
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
