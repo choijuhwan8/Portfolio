@@ -58,8 +58,7 @@ export const Banner = () => {
                     <Col xs={12} xl={5} className="d-none d-xl-block">
                         <img className='profileImage' src={profileImage} alt='Profile Img' />
                     </Col>
-                    {/* Additional Col for smaller screens (below xl) */}
-                    
+               
                 </Row>
             </Container>
         </section>
