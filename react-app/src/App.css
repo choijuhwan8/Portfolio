@@ -97,8 +97,28 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
+
 nav.navbar a.navbar-brand {
     width: 9%;
+	color: #fff !important;
+	/* font-size: 3rem; */
+	font-size: 10px;
+        /* font-weight: bold; */
+        /* color: #333; */
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px #FFFF00;
+
+}
+.brand {
+	color: #fff !important;
+	margin-bottom: 0 !important;
+
+}
+@media (min-width: 768px) and (max-width: 994px) {
+    .brand {
+        font-size: 20px !important; /* Adjust font size for smaller screens */
+    }
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -344,8 +364,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .profileImage {
     position: absolute; /* Position the image absolutely */
-    top: 0; /* Align the image to the top of the parent (.banner) */
-    height: 100%; /* Take full height of the parent (.banner) */
+	align-self: end;
+    top: 250px; /* Align the image to the top of the parent (.banner) */
+    height: 30%; /* Take full height of the parent (.banner) */
     width: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Rounded border */
 	z-index: -1;
@@ -353,10 +374,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media (max-width: 1000px) {
     .profileImage {
-        position: relative; /* Revert position to relative */
+          position: relative; /* Revert position to relative */
+        display: block; /* Ensure it's block-level */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
         height: 60%; /* Adjust height for smaller screens */
-        width: 60%; 
-		margin-bottom: 40px;
+        width: 60%; /* Adjust width proportionally */
+		top: 0;
+        margin-bottom: 40px; /* Space below image */
     }
 }
 
@@ -364,6 +389,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  margin-top: 90px;
 }
 .skill-bx {
   background: #151515;

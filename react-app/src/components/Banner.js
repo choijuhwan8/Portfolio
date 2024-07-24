@@ -55,7 +55,7 @@ export const Banner = () => {
 						<p>As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.</p>
                         <button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}>Let's connect <ArrowRightCircle size={25} /></button>
                     </Col>
-                    <Col xs={12} xl={5} className="d-none d-xl-block">
+                    <Col xs={12} xl={5} className="d-none d-xl-flex justify-content-end align-items-center">
                         <img className='profileImage' src={profileImage} alt='Profile Img' />
                     </Col>
                
