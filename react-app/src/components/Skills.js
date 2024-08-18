@@ -34,22 +34,22 @@ export const Skills = () => {
 					<Col>
 						<div className="skill-bx">
 							<h2>Skills</h2>
-							<p>Lorem ipsum</p>
+							<p>skills-explanation</p>
 							<Carousel responsive={responsive} infinite={true} className="skill-slider">
 								<div className="item">
-									<img src={meter1} alt="Skill image" />
+									<img src={meter1} alt="Skill image1" />
 									<h5>Web Development</h5>
 								</div>
 								<div className="item">
-									<img src={meter2} alt="Skill image" />
+									<img src={meter2} alt="Skill image2" />
 									<h5>Brand Identity</h5>
 								</div>
 								<div className="item">
-									<img src={meter3} alt="Skill image" />
+									<img src={meter3} alt="Skill image3" />
 									<h5>Logo Design</h5>
 								</div>
 								<div className="item">
-									<img src={meter1} alt="Skill image" />
+									<img src={meter1} alt="Skill image4" />
 									<h5>Web Design</h5>
 								</div>
 							</Carousel>
@@ -57,7 +57,7 @@ export const Skills = () => {
 					</Col>
 				</Row>
 			</Container>
-			<img className="background-image-left" src={colorSharp} />
+			<img className="background-image-left" src={colorSharp} alt="background image2" />
 		</section>
 	)
 	

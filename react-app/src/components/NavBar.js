@@ -1,69 +1,56 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-// import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
-// import { HashLink } from 'react-router-hash-link';
-import {
-	BrowserRouter as Router
-} from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export const NavBar = () => {
-	const [activeLink, setActiveLink] = useState('home');
-	const [scrolled, setScrolled] = useState(false);
-	
-	useEffect(() => {
-		const onScroll = () => {
-			if (window.scrollY > 50){
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		}
-		
-		window.addEventListener("scroll", onScroll);
-		
-		return () => window.removeEventListener("scroll", onScroll);  
-	}, [])
-	
-	const onUpdateActiveLink = (value) => {
-		setActiveLink(value);
-	}
-	
-	return (
-		<Router>
-			<Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-			  <Container>
-				<Navbar.Brand href="#home">
-					{/* <img src={logo} alt="Logo" /> */}
-					<h1 className='brand'>Choi J. Portfolio</h1>
-					
-				</Navbar.Brand >
-				<Navbar.Toggle aria-controls="basic-navbar-nav">
-					<span className="navbar-toggler-icon"></span>	
-				</Navbar.Toggle>
-				<Navbar.Collapse id="basic-navbar-nav">
-				  <Nav className="ms-auto">
-					<Nav.Link href="#home" className={activeLink ==='home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-					<Nav.Link href="#skills" className={activeLink ==='skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-					<Nav.Link href="#projects" className={activeLink ==='projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-				  </Nav>
-				  <span className="navbar-text">
-					<div className="social-icon">
-						<a href="https://www.linkedin.com/in/juhwan-choi-861970219/" target='_blank' rel="noopener noreferrer"><img src={navIcon1} alt="linkedin icon" /></a>
-						<a href="https://telegram.me/choi88888" target='_blank' rel="noopener noreferrer"><img src={navIcon2} alt="telegram icon" /></a>
-						<a href="https://www.instagram.com/ch_0i_" target='_blank' rel="noopener noreferrer"><img src={navIcon3} alt="instagram icon" /></a>
-					</div>
-					  {/* <HashLink to='#connect'>
-						<button className='vvd' onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}><span>Let’s Connect</span></button>
-					</HashLink> */}
-				  </span>
-				  
-				</Navbar.Collapse>
-			  </Container>
-			</Navbar>
-		</Router>
-	)
-}
+  const [activeLink, setActiveLink] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  };
+
+  return (
+    <Router>
+      <Navbar 
+        expand="md" 
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-black py-1' : 'bg-transparent py-1'}`}
+      >
+        <Container className="flex items-center justify-between">
+          <Nav.Link
+            href="#home"
+            className={`text-white ${activeLink === 'home' ? 'font-bold underline' : ''} transition-opacity duration-300`}
+            onClick={() => onUpdateActiveLink('home')}
+          >
+            Home
+          </Nav.Link>
+  		  <Navbar.Brand href="#home" className="!mr-0 !mb-0">
+  		  	<h1 className='text-white text-2xl'>C</h1>
+		  </Navbar.Brand>
+
+          <Nav.Link
+            href="#info"
+            className={`text-white ${activeLink === 'info' ? 'font-bold underline' : ''} transition-opacity duration-300`}
+            onClick={() => onUpdateActiveLink('info')}
+          >
+            Info
+          </Nav.Link>
+        </Container>
+      </Navbar>
+    </Router>
+  );
+};

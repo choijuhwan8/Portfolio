@@ -1,8 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-// import headerImg from '../assets/img/header-img.svg';
-import profileImage from '../assets/img/profile-image.png';
+// import profileImage from '../assets/img/profile-image.png';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -40,27 +39,27 @@ export const Banner = () => {
         return () => {
             clearInterval(ticker);
         };
-    }, [delta, tick]); // Include 'tick' in the dependency array of useEffect
+    }, [delta, tick]);
 
-	return (
-		<section className='banner' id='home'>
+    return (
+        <section className='relative mt-0 pt-[260px] pb-[100px] bg-black bg-cover bg-center h-screen' id='home'>
             <Container>
-                <Row className="align-items-center">
+                <Row className="items-center lowercase">
                     <Col xs={12} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>Hi I'm <span className="webdecoded">Choi Juhwan</span><br /><span className="wrap">{text}</span></h1>
-                        <Col xs={12} className="d-xl-none text-center">
-                        	<img className='profileImage' src={profileImage} alt='Profile Img' />
-                    	</Col>
-						<p>As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.</p>
-                        <button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')}>Let's connect <ArrowRightCircle size={25} /></button>
+                        <span className="font-bold text-white text-sm py-2 px-3 bg-gradient-to-r from-pink-500 to-blue-500 border border-white border-opacity-50 rounded-lg inline-block mb-4">Welcome to my Portfolio</span>
+                        <h1 className='text-white text-[65px] font-bold leading-tight mb-5'>
+                            Hi I'm <span className="whitespace-nowrap">Choi Juhwan</span><br /><span className="inline-block text-[#ca03fc] text-[20px] mt-2 h-[50px] overflow-hidden border-r-2 border-gray-600">{text}</span>
+                        </h1>
+                        <p className='text-gray-400 text-[18px] leading-relaxed w-[96%] lowercase'>
+                            As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.
+                        </p>
+                        <button onClick={() => window.open('https://www.linkedin.com/in/juhwan-choi-861970219/')} className='text-white font-bold text-[20px] mt-8 flex items-center'>
+                            Let's connect <ArrowRightCircle size={25} className='ml-2 transition-transform duration-300 hover:translate-x-4' />
+                        </button>
                     </Col>
-                    <Col xs={12} xl={5} className="d-none d-xl-flex justify-content-end align-items-center">
-                        <img className='profileImage' src={profileImage} alt='Profile Img' />
-                    </Col>
-               
+                
                 </Row>
             </Container>
         </section>
-	)
+    )
 }
