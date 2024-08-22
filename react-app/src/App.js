@@ -1,26 +1,30 @@
 // import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar';
-import { Banner } from './components/Banner';
+// import { Banner } from './components/Banner';
 // import { Skills } from './components/Skills';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './pages/HomePage';
+import InfoPage from './pages/InfoPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
-  <div className="App bg-primary w-full overflow-hidden relative">
-      <header className="fixed top-0 w-full z-50 bg-black sm:px-16 flex justify-center items-center transition-all duration-300 ease-in-out">
-        <div className="xl:max-w-[1280px] w-full">
+    <Router>
+      <div className="App bg-primary w-full overflow-hidden relative">
+        <header className="fixed top-0 w-full z-50 bg-transparent transition-all duration-300 ease-in-out">
           <NavBar />
-        </div>
-      </header>
-      <Banner />
-	  <div className="h-screen">
-		djfsakljdsfa
-	  </div>
-		  <div className="h-screen">
-		djfsakljdsfa
-	  </div>
-    </div>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/info" element={<InfoPage />} />
+		    <Route path="/projects" element={<ProjectsPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

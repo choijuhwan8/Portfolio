@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Navbar, Container } from "react-bootstrap";
+import { NavLink } from 'react-router-dom'; // Import NavLink for routing
+import SpinningLogo from './SpinningLogo';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -25,32 +26,35 @@ export const NavBar = () => {
   };
 
   return (
-    <Router>
-      <Navbar 
-        expand="md" 
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-black py-1' : 'bg-transparent py-1'}`}
-      >
-        <Container className="flex items-center justify-between">
-          <Nav.Link
-            href="#home"
-            className={`text-white ${activeLink === 'home' ? 'font-bold underline' : ''} transition-opacity duration-300`}
-            onClick={() => onUpdateActiveLink('home')}
-          >
-            Home
-          </Nav.Link>
-  		  <Navbar.Brand href="#home" className="!mr-0 !mb-0">
-  		  	<h1 className='text-white text-2xl'>C</h1>
-		  </Navbar.Brand>
-
-          <Nav.Link
-            href="#info"
-            className={`text-white ${activeLink === 'info' ? 'font-bold underline' : ''} transition-opacity duration-300`}
-            onClick={() => onUpdateActiveLink('info')}
-          >
-            Info
-          </Nav.Link>
-        </Container>
-      </Navbar>
-    </Router>
+    <Navbar
+      expand="md"
+      className={`!w-full transition-all duration-300 ease-in-out ${scrolled ? 'bg-transparent py-1' : 'bg-transparent py-1'}`}
+    >
+      <Container fluid className="px-4 mx-4">
+        <NavLink
+          to="/projects"
+          className={`text-white text-xl no-underline ${activeLink === 'projects' ? 'font-bold underline' : ''} transition-opacity duration-300`}
+          onClick={() => onUpdateActiveLink('projects')}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          to="/"
+          className="d-flex align-items-center !no-underline"
+          onClick={() => onUpdateActiveLink('home')}
+        >
+          <h1 className="text-white text-2xl mb-0 !no-underline">
+            <SpinningLogo />
+          </h1>
+        </NavLink>
+        <NavLink
+          to="/info"
+          className={`text-white text-xl no-underline ${activeLink === 'info' ? 'font-bold underline' : ''} transition-opacity duration-300`}
+          onClick={() => onUpdateActiveLink('info')}
+        >
+          Info
+        </NavLink>
+      </Container>
+    </Navbar>
   );
 };
