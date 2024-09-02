@@ -12,8 +12,8 @@ import ProjectsPage from './pages/ProjectsPage';
 function App() {
   return (
     <Router>
-      <div className="App bg-primary w-full overflow-hidden relative">
-        <header className="fixed top-0 w-full z-50 bg-transparent transition-all duration-300 ease-in-out">
+      <div className="App bg-black w-full overflow-hidden relative">
+        <header className="fixed top-5 mt-4 w-full z-50 bg-transparent transition-all duration-300 ease-in-out">
           <NavBar />
         </header>
         <main>

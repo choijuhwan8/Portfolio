@@ -132,17 +132,22 @@ p.danger {
   width: 40%;
   z-index: -4;
 }
+/* Adjusted .spinning-logo */
 .spinning-logo {
   width: 150px;
   height: 50px;
   display: flex;
-  align-items: center !important;
+  position: absolute; /* Ensure it can be positioned relative to the parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element both vertically and horizontally */
+  align-items: center;
   justify-content: center;
   perspective: 1000px;
 }
 
+/* Styling for the spinning text inside */
 .logo-text {
-  decoration: none;
   font-size: 3rem;
   font-weight: bold;
   color: #fff;
@@ -157,7 +162,6 @@ p.danger {
   transform-style: preserve-3d;
   animation: spin 5s linear infinite;
 }
-
 @keyframes spin {
   0% {
     transform: rotateY(0);
