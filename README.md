@@ -13,6 +13,10 @@ cd react-app
 npm start
 https://portfolio-choi-wcgjc.run.goorm.site
 
+z index of modal 
+https://www.google.com/search?q=making+spinning+logo&oq=making+spinning+logo&aqs=chrome..69i57j33i160l2.4760j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:732db5d4,vid:keC_ocakMi8,st:0
+https://www.canva.com/create/3d-logos/
+
 24.7.1 23:27 
 24.7.4 36.59
 

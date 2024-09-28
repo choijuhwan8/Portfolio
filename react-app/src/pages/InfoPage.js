@@ -49,12 +49,7 @@ const InfoPage = () => (
 				</section>
 				
 			</div> 			
-			<div>05</div>
-  			<div class="grid grid-cols-3 gap-4 col-span-3">
-				<div class="col-start-1">06</div>
-				<div class="col-start-2">06</div>
-				<div class="col-start-3">06</div>
-			</div>
+  			
 
 		</div>
        </section>
