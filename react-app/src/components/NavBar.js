@@ -3,7 +3,7 @@ import { Navbar, Container } from "react-bootstrap";
 import { NavLink } from 'react-router-dom'; // Import NavLink for routing
 import SpinningLogo from './SpinningLogo';
 
-export const NavBar = () => {
+export const NavBar = ({isOpen}) => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -44,7 +44,7 @@ export const NavBar = () => {
           onClick={() => onUpdateActiveLink('home')}
         >
           <h1 className="text-white text-2xl mb-0 !no-underline">
-            <SpinningLogo />
+			  {!isOpen && <SpinningLogo />}
           </h1>
         </NavLink>
         <NavLink

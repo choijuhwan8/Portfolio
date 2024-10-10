@@ -134,6 +134,7 @@ p.danger {
 }
 /* Adjusted .spinning-logo */
 .spinning-logo {
+  z-index: 100 !important;
   width: 150px;
   height: 50px;
   display: flex;

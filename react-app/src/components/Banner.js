@@ -46,9 +46,8 @@ const Banner = () => {
             <Container>
                 <Row className="items-center lowercase">
                     <Col xs={12} xl={7}>
-                        <span className="font-bold text-white text-sm py-2 px-3 bg-gradient-to-r from-pink-500 to-blue-500 border border-white border-opacity-50 rounded-lg inline-block mb-4">Welcome to my Portfolio</span>
                         <h1 className='text-white text-[65px] font-bold leading-tight mb-5'>
-                            Hi I'm <span className="whitespace-nowrap">Choi Juhwan</span><br /><span className="inline-block text-[#ca03fc] text-[20px] mt-2 h-[50px] overflow-hidden border-r-2 border-gray-600">{text}</span>
+                            Hi I'm <span className="whitespace-nowrap">Choi Juhwan</span><br /><span className="inline-block text-[#ca03fc] text-[24px] mt-2 h-[30px] overflow-hidden border-r-2 border-gray-600">{text}</span>
                         </h1>
                         <p className='text-gray-400 text-[18px] leading-relaxed w-[96%] lowercase'>
                             As a student of Information Systems at Singapore Management University, I am passionate about leveraging technology to drive business success. With a focus on front-end development, I am skilled in creating intuitive and visually appealing user interfaces that improve user experience. I am eager to connect with professionals in the industry and learn more about how technology can be leveraged to drive business growth.
